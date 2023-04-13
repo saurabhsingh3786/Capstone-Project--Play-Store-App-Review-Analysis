@@ -1,8 +1,6 @@
 # Capstone-Project--Play-Store-App-Review-Analysis
 I create this EDA based capstone project for take a deep look into google play store app review for collecting,cleaning and organise its data to use for a suitable purpose.
 <h1 align="center"> Play Store App Review Analysis</h1>
-<h3 align="center"> AlmaBetter Verfied Project - <a href="https://www.almabetter.com/"> AlmaBetter </a> </h5>
-
 <p align="center"> 
 <img src="GIF/google play.gif" alt="Animated gif" height="282px">
 </p>
@@ -10,26 +8,29 @@ I create this EDA based capstone project for take a deep look into google play s
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📋 Abstract
-A few thousands of new applications are regularly uploaded on Google play store. A huge number of designers working freely on designing the apps and making them successful. With the enormous challenge from everywhere throughout the globe, it is important for a developer to know whether he/she is continuing the correct way or not. Since most Play Store applications are free, the income model is very obscure and inaccessible regarding how the in-application buys, in-application adverts and memberships add to the achievement of an application. In this way, an application's prosperity is normally dictated by the quantity of installation of the application and the client appraisals that it has gotten over its lifetime instead of the income is created.
+The Play Store apps data has enormous potential to drive app-making businesses to success. Actionable insights can be drawn for developers to work on and capture the Android market.
+Each app (row) has values for catergory, rating, size, and more. Another dataset contains customer reviews of the android apps.
+Explore and analyze the data to discover key factors responsible for app engagement and success.
+Mobile apps are everywhere. They are easy to create and can be money making. Because of these two factors, more and more apps are being developed. In this notebook, we will do a comprehensive analysis of the Android app market by comparing over ten thousand apps in Google Play across different categories. We'll look for insights in the data to devise strategies to drive growth and retention.
 The objective of this experiment is to deliver insights to understand customer demands better and thus help developers to popularize the product. We have tried to discover the relationships among various attributes such as which application is free or paid, what are the user reviews, rating of the application.
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ##  💾 Project Files Description
 
-<p>This Project includes 1 colab notebook, 1 technical documentation as well as 1 presentation:</p>
+<p>This Project includes 1 individual colab notebook,1 team notebook, 2 datasets csv files along with  technical documentation:</p>
 
 ### Executable Files:
-- [Play Store App Review Analysis](https://github.com/San13deep/Play-Store-App-Review-Analysis/blob/main/Play_Store_App_Review_Analysis_Capstone_Project.ipynb) - Includes all functions required for clustering operations.
+- [Play Store App Review Analysis](https://github.com/saurabhsingh3786/Capstone-Project-Play-Store-App-Review-Analysis/commit/49fe00cfba6a41266cd99741b3ae197a8b221736#diff-a21e433a3b722e3b41c160410a85e5e11e89bd13c31a646a04c63bf5b6af5cc7) - Includes all functions required for clustering operations.
 
 ### Output:
-- [Google Colab](https://github.com/San13deep/Play-Store-App-Review-Analysis/blob/main/Play_Store_App_Review_Analysis_Capstone_Project.ipynb) - All the outputs are visible in the provided colab notebook.
+- [Google Colab](https://github.com/saurabhsingh3786/Capstone-Project-Play-Store-App-Review-Analysis/commit/49fe00cfba6a41266cd99741b3ae197a8b221736#diff-a21e433a3b722e3b41c160410a85e5e11e89bd13c31a646a04c63bf5b6af5cc7) - All the outputs are visible in the provided colab notebook.
 
 ### Input Files:
   <li><b>Play Store Data.csv</b> - It contains the basic details of the app like number of user reviews, ratings, etc.</li>
   <li><b>User Reviews.csv</b> - It contains the user reviews and its sentiment score for the respective app.</li>
 
 ### Data Source:
-- [Dataset](https://learn.almabetter.com/courses/take/team-capstone-projects/texts/19443175-play-store-app-review-analysis-dataset) - Dataset taken from Almabetter
+- Dataset taken from Almabetter
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -68,23 +69,17 @@ At first, we analysis the play store data and in the play store data we have 108
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📋Problem Statements
-1. What are the top categories on Play Store?
-2. Are majority of the apps Paid or Free?
-3. How importance is the rating of the application?
-4. Which categories from the audience should the app be based on?
-5. Which category has the most no. of installations?
-6. How does the count of apps varies by Genres?
-7. How does the last update has an effect on the rating?
-8. How are ratings affected when the app is a paid one?
-9. How are reviews and ratings co-related?
-10. Lets us discuss the sentiment subjectivity.
-11. Is subjectivity and polarity proportional to each other?
-12. What is the percentage of review sentiments?
-13. How is sentiment polarity varying for paid and free apps?
-14. How Content Rating affect over the App?
-15. Does Last Update date has an effects on rating?
-16. Distribution of App update over the Year.
-17. Distribution of Paid and Free app updated over the Month.
+1. Which category has highest share of app in market?
+2. What is distribution of Apps rating?
+3. Which content Rating has highest count?
+4. Which Genres have most number of apps?
+5. What are the sentiments of people towards apps?
+6. Is there any Correlation between App Size and ratings?
+7. How is price trending across some categories?
+8. Is subjectivity and polarity proportional to each other?
+9. What are top 10 downloaded apps based on reviews and what's difference between their rating & reviews?
+10.Is there any corelation between Rating,Size,Installs,Reviews and Price?
+11.Is there any corelation between all quantitative value in both datasets?
 
 ********************************************************************************************************************************************************************
 ## 📔 **What is Exploratory Data Analysis?**
@@ -115,60 +110,28 @@ From the information of data frame, we can see that all the columns except ratin
 ### Exploratory Data Analysis
 After establishing a good sense of each feature, we proceeded with plotting a pairwise plot between all the quantitative variables to look for any evident patterns or relationships between the features. There is a high variance in the number of installs and in number of reviews. To overcome this problem, we add two new columns to the data frame named: log_installs and log_review, which contain the logarithmic values of installs and review columns, respectively.
 
-### Single Variate Analysis
-After that we analysis all the columns one by one to examine whether the particular column contain some useful information or not:
 
-### Category
-We breakdown the apps by category and observe that family and game categories have the maximum number of apps in the play store. Weather, house and home, comics, events, beauty, and parenting are the categories which have a few numbers of apps.
 
-### Data wrangling
-Apart from this, two new columns were added to the main data frame, namely, “Rating Group”, and “Revenue”. This is done to improve simplify the analysis and come up with different meaningful visualizations
 
-* <b>Rating Group:</b> This column groups the apps based on the average user rating. (4-5: Top rated, 3-4: Above average, 2-3: Average, 1-2: Below average).
-*	<b>Revenue:</b> This column gives the revenue generated by the app through app installs alone.
-By doing these operations on the original dataset, we are ready with the data pipeline, and data visualizations can be done on it.
-All the apps in play store have the rating between 0.5 to 5. Maximum apps have the rating between 3.8 to 4.5.
 
-### Installs
-We analysis the install column to observe the effect of size, price, rating, content rating, android version on app installation number. We can analysis that for each and every category number of app installation does not depend on the size. The free apps installed mostly. The apps which can be used by everyone is more installed than the apps which can be used by a particular age group. Rating of mostly installed apps is between 4 and 5.
 
-## 🛠	Challenges Faced:
-* Reading the dataset and comprehending the problem statement. Our major challenge was data cleaning.
-* Handling the error, duplicate and NaN values in the dataset.
-* 13.60% of reviews were NaN values, and even after merging both the dataframes, we could not infer much in order to fill them. Thus we had to drop them.
-* The merged data frame of both play store and user reviews, had only 816 common apps. This is just 10% of the cleaned data, we could have given more valuable analysis, if we had atleast 70% - 80% of the data available in the merged dataframes.
-* User Reviews had 42% of NaN values, which could have been used for developing an understanding of the category wise sentiments, which would help us to fill 13.60% NaN values of the Reviews column.
-* There is so much more which can be explored. Like we have current version, android version available which can be explored in detail and we can come out with more analysis where we can tell how does these things effect and needs to be kept in mind while developing app for the users.
-* We can explore the correlation between the size of the app and the version of Android on the number of installs.
-* Machine learning can help us to deploy more insights by developing models which can help us interpret even more better. We have left this as future work as this is something where we can work on.
-*	Designing multiple visualizations to summarize the information in the dataset and successfully communicate the results and trends to the reader.
+
+
+
+
+
+
 
 ## 📋 Conclusion:
-Most of the apps are free so developers should focus on creating free apps to have a huge customer base. If developing paid apps then apps size should not be greater than 40mb. More Apps should be in the category like Events,Beauty,Parenting as they have not been explored much but still quite popular with huge installations. In order to retain the customer base apps should be updated regularly Developers should develop apps such that their content is available for everyone. Bulky apps should be developed in the category like Game, Family. If developing paid apps then its price should not be high and size should be less than 20mb. Apps belonging to Game and Family Category have high negative reviews therefore they should be developed carefully. Like this there can be a lot of conclusions but we have tried to cover the most important ones.
-These are some of the aspects that the developer should research before proceeding with the app development. By conducting a simple exploratory data analysis (EDA) on the play store dataset, we not only eliminate avoidable risks of failure, but we may also be able to provide better ideas for building the app.
-*	Percentage of free apps = ~92%
-*	Percentage of apps with no age restrictions = ~82%
-*	Most competitive category: Family
-*	Category with the highest number of installs: Game
-*	Category with the highest average app installs: Communication
-*	Percentage of apps that are top rated = ~80%
-*	There are 20 free apps that have been installed over a billion times
-*	Minecraft is the only app in the paid category with over 10M installs. This app has also produced the most revenue only from the installation fee.
-*	Category in which the paid apps have the highest average installation fee: Finance
-*	Most popular app in the Play Store based on the number of reviews: Facebook
-*	The median size of all apps in the play store is 12 MB.
-*	The apps whose size varies with device has the highest number average app installs.
-*	The apps whose size is greater than 90 MB has the highest number of average user reviews, i.e., they are more popular than the rest.
-*	Helix Jump has the highest number of positive reviews and Angry Birds Classic has the highest number of negative reviews.
+Our main objective here was to handle all the missing value and duplicates , providing app developers and stakeholders a insight to make their application according to marketing strategies follow according to analysis. Some points as we already discussed that what we have found regarding this dataset so for more generalised things that a company could focus are give here as-
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+Overall rating distribution: The analysis can provide information on the overall distribution of ratings for the apps in the Play Store. This can help understand the popularity of different rating levels, and also identify the areas where the app developers can improve to attract more users.
 
-## 💶 Credits
+Ratings by category: The analysis can also provide insights on the ratings distribution by category, such as entertainment, productivity, education, etc. This can help identify the categories that are most popular among users, and also understand the expectations of users from apps in different categories.
 
-Contact me for Data Science Project Collaborations
+Reviews sentiment analysis: The analysis can also involve sentiment analysis of the app reviews, which can help understand the sentiment of users towards different apps. This can be useful in identifying the areas where the app developers need to improve, as well as understanding the strengths of popular apps.
 
-[![GitHub](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/San13deep)
-[![LinkedIn](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sandeepmaurya13/)
+App size and ratings correlation: Another possible insight is to identify if there is any correlation between app size and ratings. This can help understand if users prefer smaller apps, and whether developers should focus on optimizing the app size to improve ratings.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -182,9 +145,8 @@ Contact me for Data Science Project Collaborations
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 ## 📜 Feedback
-- [Play Store App Review Analysis](https://learn.almabetter.com/courses/take/team-capstone-projects/texts/19443175-play-store-app-review-analysis)
-- [PPT Presentation Link](https://docs.google.com/presentation/d/1pWW9DDHigLfgkcfx0VFE9Sb3qsgjvkWQ/edit?usp=sharing&ouid=110479376441430594935&rtpof=true&sd=true)
 
-If you have any feedback, please reach out to us at sandeepskm13@gmail.com
+
+If you have any feedback, please reach out to us at 100rbh.singh18@gmail.com
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)

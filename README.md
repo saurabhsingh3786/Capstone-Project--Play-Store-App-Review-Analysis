@@ -17,7 +17,7 @@ The objective of this experiment is to deliver insights to understand customer d
 
 ##  💾 Project Files Description
 
-<p>This Project includes 1 individual colab notebook,1 team notebook, 2 datasets csv files along with  technical documentation:</p>
+<p>This Project includes 1 individual colab notebook,1 team notebook and 2 datasets csv files:</p>
 
 ### Executable Files:
 - [Play Store App Review Analysis](https://github.com/saurabhsingh3786/Capstone-Project-Play-Store-App-Review-Analysis/commit/49fe00cfba6a41266cd99741b3ae197a8b221736#diff-a21e433a3b722e3b41c160410a85e5e11e89bd13c31a646a04c63bf5b6af5cc7) - Includes all functions required for clustering operations.
